@@ -14,8 +14,11 @@ html {
     scroll-behavior: smooth;
 }
 
-/* bars */
+.imgNone>img {
+    display: none;
+}
 
+/* bars */
 #check {
     display: none;
 }
@@ -46,8 +49,8 @@ html {
 
 li>a {
     list-style: none;
-    color: #fff;
-    opacity: 0.60;
+    color: #ccc;
+
     text-decoration: none;
 }
 
@@ -56,6 +59,7 @@ li>a {
 }
 
 .menu {
+    list-style: none;
     margin-right: 0px;
     display: list-item;
     background-color: #000;
@@ -81,6 +85,12 @@ nav:hover {
 }
 
 /* bars */
+
+.menu,
+.links:hover {
+    color: #fff;
+}
+
 
 .bg-img {
     background: url("./images/main_files/profile_girl.jpg");
@@ -278,6 +288,7 @@ h2 {
     background-color: #616161;
     color: white;
     text-align: center;
+    font-family: "Montserrat", sans-serif;
 }
 
 .number-size {
@@ -302,14 +313,14 @@ h2 {
 }
 
 /* step 5 */
-.head-5{
-   padding:0px 8px; 
-} 
+.head-5 {
+    padding: 0px 8px;
+}
 
 .man-section {
     display: flex;
     position: relative;
-    padding: 16px  10px;
+    padding: 16px 10px;
 }
 
 .left-img p>img {
@@ -318,10 +329,10 @@ h2 {
     margin-right: 15px;
 }
 
-#txt-img{
+#txt-img {
     padding: 10px 0px;
     margin: 5px 0px;
-    font-family: "Montserrat", sans-serif;    
+    font-family: "Montserrat", sans-serif;
 }
 
 /* step 6 */
@@ -497,4 +508,71 @@ footer {
 
 .para-7 p>a {
     color: #000;
+}
+
+
+/* media query */
+@media only screen and (max-width: 992px) {
+    .bg-img {
+        display: none;
+    }
+
+    .imgNone>img {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .imgNone {
+
+        width: 100%;
+    }
+
+    .right-container {
+        margin: auto;
+    }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .imgNone>img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px 16px;
+    }
+
+    .imgNone {
+        width: 100%;
+    }
+
+    .images {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-1,
+    .section-2,
+    .section-3,
+    .section-4 {
+        margin: 16px 0px;
+
+    }
+
+    .main-card-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-1,
+    .card-2 {
+        width: 100%;
+        margin: 8px 0px;
+    }
 }
